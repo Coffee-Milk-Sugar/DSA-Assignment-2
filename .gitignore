@@ -1,0 +1,27 @@
+# Build artifacts
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# VS-specific files
+*.suo
+*.user
+*.vcxproj.user
+*.cache
+*.log
+
+# Intermediate folders
+/bin/
+/obj/
+/Debug/
+/Release/
+
+# Precompiled headers
+*.pch
+*.ipch
+
+# Temporary files
+*.tmp
+*.bak
