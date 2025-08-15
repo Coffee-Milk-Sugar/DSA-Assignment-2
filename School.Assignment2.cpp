@@ -14,4 +14,5 @@ int main()
 
 void printHello() {
     std::cout << "Hello! Here's the second change." << std::endl;
+    std::cout << "Not anymore the world is bad" << std::endl; //Third change
 }
