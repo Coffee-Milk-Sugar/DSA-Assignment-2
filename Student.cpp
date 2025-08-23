@@ -1,7 +1,6 @@
 #include <iostream>
-
 #include "Student.h"
-
+#pragma disable(warning: 4966)
 
 using namespace std;
 
