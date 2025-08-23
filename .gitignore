@@ -1,27 +1,63 @@
-# Build artifacts
-*.obj
-*.exe
-*.dll
-*.lib
-*.pdb
-
-# VS-specific files
+# 🔧 Visual Studio IDE
+.vs/
 *.suo
 *.user
-*.vcxproj.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.vscode/
+
+# 🧪 Build Artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
 *.cache
 *.log
 
-# Intermediate folders
-/bin/
-/obj/
-/Debug/
-/Release/
+# 📦 Package Managers
+node_modules/
+package-lock.json
+yarn.lock
 
-# Precompiled headers
-*.pch
-*.ipch
+# 🔥 Firebase & React
+firebase-debug.log
+.env.local
+.env.development
+.env.production
+.env.test
 
-# Temporary files
+# 🧠 VS Code Extensions & Settings
+.vscode/
+*.code-workspace
+
+# 📸 OS & Editor Junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 📄 Academic & Slide Assets
+*.drawio.bkp
 *.tmp
 *.bak
+~$*
+
+# 🚀 Deployment
+dist/
+build/
+.vercel/
+.next/
+out/
+
+# 🧪 Testing
+coverage/
+*.test.js
+*.spec.js
+jest.config.js
+
+# 🧾 Misc
+*.vsidx
+*.FileContentIndex
+*.sqlite
