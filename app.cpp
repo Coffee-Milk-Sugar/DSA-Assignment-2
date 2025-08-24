@@ -18,6 +18,13 @@ int main() {
 	BST* tree = new BST();
 	readFile("student.txt", tree);
 
+	tree->preOrderPrint();
+
+
+
+	
+
+
 	system("pause");
 	return 0;
 }
@@ -43,17 +50,17 @@ bool readFile(const char* filename, BST* tree) {
 	double cgpa;
 	string dummy;
     while (getline(FileReader, labels, '=')) {
+		Student tempStudent = Student(); //Create new student object container
+		Student* stuPointer = &tempStudent;
+
 		getline(FileReader, scanLine);
         stringstream Cursor(scanLine); 
 		Cursor >> studentID;
-		Cursor.clear();
 
 		getline(FileReader, labels, '=');
 		getline(FileReader, scanLine);
-		Cursor.str(scanLine);
-		Cursor >> name;
+		name = scanLine;
 
-		Cursor.clear();
 		getline(FileReader, labels, '=');
 		getline(FileReader, scanLine);
 		address = scanLine;
@@ -82,7 +89,16 @@ bool readFile(const char* filename, BST* tree) {
 		Cursor.str(scanLine);
 		Cursor >> cgpa;
 
-		
+		//Assign the scanned data into the created Student object
+		stuPointer->id = studentID;
+		strcpy_s(stuPointer->name, name.c_str());
+		strcpy_s(stuPointer->address, address.c_str());
+		strcpy_s(stuPointer->DOB, dob.c_str());
+		strcpy_s(stuPointer->phone_no, phoneNumber.c_str());
+		strcpy_s(stuPointer->course, course.c_str());
+		stuPointer->cgpa = cgpa;
+
+		tree->insert(tempStudent);
     }
 	
 
