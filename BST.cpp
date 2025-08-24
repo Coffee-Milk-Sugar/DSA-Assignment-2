@@ -114,7 +114,6 @@ void BST::fGS3(BTNode *cur, int level) {
 }
 
 
-
 void BST::topDownLevelTraversal() {
 	BTNode			*cur;
 	Queue		    q;
@@ -311,7 +310,6 @@ bool BST::deepestNodes() {
 	return true;
 }
 
-
 //(c)
 bool BST::display(int order, int source) {
 	/*
@@ -422,9 +420,71 @@ bool BST::printLevelNodes() {
 	return true;
 }
 
-
 //(f)
 bool BST::printPath() {
+
+	BTNode* cur;
+	BTNode* discard;
+	BTNode* placeholder;
+	Queue	q;
+	Queue currentLevelLeaves;
+
+	if (empty()) return false; 	// special case
+	q.enqueue(root);		// Step 1: enqueue the first node
+	while (!q.empty()) {		// Step 2: do 2 operations inside
+		int size = q.size();
+
+
+		for (int i = 0; i < size; i++) {
+			q.dequeue(cur);
+			if (cur != NULL) {
+				if (cur->left != NULL) { q.enqueue(cur->left); }
+				if (cur->right != NULL) { q.enqueue(cur->right); }
+				if (cur->left == NULL && cur->right == NULL) currentLevelLeaves.enqueue(cur); //Append the leaves to the custom queue
+			}
+
+		}
+	}
+	cout << "The paths include: " << endl;
+	int count = 1;
+	while (!currentLevelLeaves.empty()) {
+		currentLevelLeaves.dequeue(cur);
+		findPath(cur->item);
+		cout << endl;
+	}
+	cout << endl;
+
+
+	system("pause");
 	return true;
 }
 
+bool BST::findPath(type grandFather) {
+		if (root == NULL) return false;
+		return (fP2(grandFather, root));
+	}
+
+bool BST::fP2(type grandFather, BTNode * cur) {
+		if (cur == NULL) return false;
+		//if (cur->item == grandFather) {
+
+
+		if (cur->item.compare2(grandFather)) {
+
+			fP3(cur, 0);// do another TT to find grandsons
+			return true;
+		}
+		if (fP2(grandFather, cur->left)) return true;
+		return fP2(grandFather, cur->right);
+	}
+
+void BST::fP3(BTNode * cur, int level) {
+		if (cur == NULL) return;
+
+
+		if (level == 2) {
+			return;  // No need to search downward
+		}
+		fP3(cur->left, level + 1);
+		fP3(cur->right, level + 1);
+	}

@@ -70,6 +70,7 @@ int main() {
 		}
 		else if (choice == 6) { //print path
 
+			tree->printPath();
 			continue;
 		}
 		else if (choice == 7) {
