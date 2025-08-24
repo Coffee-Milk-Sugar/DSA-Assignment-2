@@ -18,7 +18,18 @@ int main() {
 	BST* tree = new BST();
 	readFile("student.txt", tree);
 
-	tree->preOrderPrint();
+	/*
+	order - 1 -> ascending (visit left then right)
+	order - 2 -> descending (visit right then left)
+
+	source - 1 -> output to screen
+	source - 2 -> output to file "student-info.txt"
+	*/
+
+	tree->display(1, 2);
+	cout << endl << "-----------------" << endl;
+
+	tree->display(2, 1);
 
 
 

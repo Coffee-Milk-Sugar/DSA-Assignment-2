@@ -45,8 +45,10 @@ struct BST {
 		int countNode();		// count number of tree nodes
 		bool findGrandsons(type);	// find the grandsons of an input father item
 
-		
-	
+		// student created function
+		bool display(int, int);
+		void customTreeTraverse(int, ostream&);
+		void customTreeTraverse2(BTNode* , int, ostream&);
 };
 
 

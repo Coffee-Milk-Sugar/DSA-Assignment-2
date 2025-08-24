@@ -258,6 +258,59 @@ void BST::case3(BTNode *cur) {
 	free(is);
 }
 
+// student created function
+
+bool BST::display(int order, int source) {
+	/*
+	order - 1 -> ascending (visit left then right)
+	order - 2 -> descending (visit right then left)
+
+	source - 1 -> output to screen
+	source - 2 -> output to file "student-info.txt"
+	*/
+
+	if (root == NULL) { //Case [1]: Empty tree
+		return false;
+	}
+
+	//Case [2]: Normal process
+	if (source == 1) {
+	
+		customTreeTraverse(order, cout);
+		return true;
+	}
+
+	if (source == 2) {
+		ofstream FileOutput("student-info.txt");
+		customTreeTraverse(order, FileOutput);
+		FileOutput.close();
+		return true;
+	}
+
+	return false;
+}
+
+void BST::customTreeTraverse(int order, ostream& output) {
+	if (root == NULL) return; //handle empty tree
+	customTreeTraverse2(root, order, output);
+	output << endl;
+}
+
+void BST::customTreeTraverse2(BTNode* cur, int order, ostream&output) {
+	if (cur == NULL) return;
+	if (order == 1) { //visit left then right
+		customTreeTraverse2(cur->left, order, output);
+		cur->item.print(output);
+		//output << cur->item.id << endl;
+		customTreeTraverse2(cur->right, order, output);
+	}
+	if (order == 2) { //visit right then left
+		customTreeTraverse2(cur->right, order, output);
+		cur->item.print(output);
+		//output << cur->item.id << endl;
+		customTreeTraverse2(cur->left, order, output);
+	}
 
 
+}
 
