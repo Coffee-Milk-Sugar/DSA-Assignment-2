@@ -71,8 +71,6 @@ void BST::postOrderPrint2(BTNode *cur) {
 	cur->item.print(cout);
 }
 
-
-
 int BST::countNode() {
 	int	counter = 0;
 	if (root == NULL) return 0;
@@ -94,7 +92,6 @@ bool BST::findGrandsons(type grandFather) {
 	return (fGS2(grandFather, root));
 }
 
-
 bool BST::fGS2(type grandFather, BTNode *cur) {
 	if (cur == NULL) return false;
 	//if (cur->item == grandFather) {
@@ -107,11 +104,9 @@ bool BST::fGS2(type grandFather, BTNode *cur) {
 	return fGS2(grandFather, cur->right);
 }
 
-
 void BST::fGS3(BTNode *cur, int level) {
 	if (cur == NULL) return;
 	if (level == 2) {
-		cur->item.print(cout);
 		return;  // No need to search downward
 	}
 	fGS3(cur->left, level + 1);
@@ -302,10 +297,14 @@ bool BST::deepestNodes() {
 
 	}
 
+	cout << "The deepest node(s) include: " << endl;
+	int count = 1;
 	while (!lastLevelLeaves.empty()) {
 		lastLevelLeaves.dequeue(cur);
-		cout << cur->item.id << endl;
+		cout << count <<".[ " << cur->item.id << " ]" <<endl;
+		count++;
 	}
+	cout << endl;
 	//cout << treeHeight << endl;
 
 
@@ -331,12 +330,17 @@ bool BST::display(int order, int source) {
 	if (source == 1) {
 	
 		customTreeTraverse(order, cout);
+
+		cout << "Successful output to screen." << endl;
 		return true;
 	}
 
 	if (source == 2) {
 		ofstream FileOutput("student-info.txt");
 		customTreeTraverse(order, FileOutput);
+
+		cout << "Successful output to file." << endl;
+
 		FileOutput.close();
 		return true;
 	}

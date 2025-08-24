@@ -13,6 +13,8 @@ using namespace std;
 
 bool readFile(const char *, BST *);
 int menu();
+void clearCinBuffer(istream &);
+
 
 int main() {
 	BST* tree = new BST();
@@ -23,27 +25,48 @@ int main() {
 		system("cls");
 
 		int choice = menu();
-		if (choice == 1) {
+		if (choice == 1) { //readFile()
 			readFile("student.txt", tree);
 			continue;
 		} 
-		else if (choice == 2) {
+		else if (choice == 2) { //print deepest node
+			tree->deepestNodes();
+
+			system("pause");
+			continue;
+		}
+		else if (choice == 3) { //display student
+			int order = 0;
+			int source = 0;
+
+			while (true) { //Loop for validity check
+				cout << "Where do you want to display the output (1 - Screen / 2 - File): ";
+				cin >> source;
+				if (source >= 1 && source <= 2) break;
+				clearCinBuffer(cin);
+
+			}
+			while (true) { //Loop for validity check
+				cout << "Which order of display? (1 - Ascending/ 2 - Descending): ";
+				cin >> order;
+				cout << endl;
+				if (order >= 1 && order <= 2) break;
+				clearCinBuffer(cin);
+			}
+			tree->display(order, source);
+
+			system("pause");
+			continue;
+		}
+		else if (choice == 4) { //clone subtree
 
 			continue;
 		}
-		else if (choice == 3) {
+		else if (choice == 5) { //print level nodes
 
 			continue;
 		}
-		else if (choice == 4) {
-
-			continue;
-		}
-		else if (choice == 5) {
-
-			continue;
-		}
-		else if (choice == 6) {
+		else if (choice == 6) { //print path
 
 			continue;
 		}
@@ -157,10 +180,14 @@ bool readFile(const char* filename, BST* tree) {
 		strcpy_s(stuPointer->course, course.c_str());
 		stuPointer->cgpa = cgpa;
 
-		tree->insert(tempStudent);
+		//Check for redundancy 
+		bool notUnique = false;
+		if (!tree->findGrandsons(tempStudent)) {
+			tree->insert(tempStudent);
+		}
     }
 	
-	cout << "Read File Successful." << endl;
+	cout << endl << endl << "Read File Successful." << endl;
 	system("pause");
 	FileReader.close();
 	return true;
@@ -169,6 +196,7 @@ bool readFile(const char* filename, BST* tree) {
 //(b)
 int menu() {
 	int selection = 0;
+	cout << "Menu" << endl << endl;
 	cout << "(1) Read data BST" << endl;
 	cout << "(2) Print deepest nodes" << endl;
 	cout << "(3) Display student" << endl;
@@ -181,4 +209,14 @@ int menu() {
 	cin >> selection;
 	return selection;
 }
-	
+
+
+//helper function
+void clearCinBuffer(istream& in) {
+	cout << endl;
+	cout << "Invalid input! Please enter numerals as choice!" << endl;
+	system("PAUSE");
+	in.clear();
+	in.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //clear all the invalid input
+	system("cls");
+}
