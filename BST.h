@@ -55,9 +55,13 @@ struct BST {
 		void customTreeTraverse2(BTNode* , int, ostream&);
 
 		//(d)
+		bool CloneSubtree(BST, type);
 
 		//(e)
+		bool printLevelNodes();
 
+		//(f)
+		bool printPath();
 };
 
 

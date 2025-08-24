@@ -16,7 +16,53 @@ int menu();
 
 int main() {
 	BST* tree = new BST();
-	readFile("student.txt", tree);
+	BST* subTree = new BST();
+
+	bool EXIT = false;
+	do {
+		system("cls");
+
+		int choice = menu();
+		if (choice == 1) {
+			readFile("student.txt", tree);
+			continue;
+		} 
+		else if (choice == 2) {
+
+			continue;
+		}
+		else if (choice == 3) {
+
+			continue;
+		}
+		else if (choice == 4) {
+
+			continue;
+		}
+		else if (choice == 5) {
+
+			continue;
+		}
+		else if (choice == 6) {
+
+			continue;
+		}
+		else if (choice == 7) {
+			EXIT = true;
+
+			cout << "See you again." << endl;
+		}
+		else {
+
+			cout << "Invalid input! Please enter numerals as choice!" << endl;
+			system("PAUSE");
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //Clear all the invalid input
+			system("cls");
+			continue;
+		}
+
+	} while (!EXIT);
 
 	/*
 	order - 1 -> ascending (visit left then right)
@@ -39,6 +85,8 @@ int main() {
 	system("pause");
 	return 0;
 }
+
+//(a)
 bool readFile(const char* filename, BST* tree) {
 	ifstream FileReader(filename);
 
@@ -112,11 +160,25 @@ bool readFile(const char* filename, BST* tree) {
 		tree->insert(tempStudent);
     }
 	
-
-
-
+	cout << "Read File Successful." << endl;
+	system("pause");
 	FileReader.close();
 	return true;
 }
 
+//(b)
+int menu() {
+	int selection = 0;
+	cout << "(1) Read data BST" << endl;
+	cout << "(2) Print deepest nodes" << endl;
+	cout << "(3) Display student" << endl;
+	cout << "(4) Clone Subtree" << endl;
+	cout << "(5) Print Level Nodes" << endl;
+	cout << "(6) Print Path" << endl;
+	cout << "(7) Exit" << endl;
+	cout << endl;
+	cout << "Selection: ";
+	cin >> selection;
+	return selection;
+}
 	

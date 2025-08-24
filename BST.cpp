@@ -313,8 +313,6 @@ bool BST::deepestNodes() {
 }
 
 
-
-
 //(c)
 bool BST::display(int order, int source) {
 	/*
@@ -366,7 +364,21 @@ void BST::customTreeTraverse2(BTNode* cur, int order, ostream&output) {
 		//output << cur->item.id << endl;
 		customTreeTraverse2(cur->left, order, output);
 	}
+}
+
+//(d)
+bool BST::CloneSubtree(BST t1, type item) {
+	return true;
+}
+
+//(e)
+bool BST::printLevelNodes() {
+	return true;
+}
 
 
+//(f)
+bool BST::printPath() {
+	return true;
 }
 
