@@ -49,8 +49,6 @@ bool Student::compare2(Student p2)
 	return false;
 }
 
-
-
 bool Student::compare3(int id2)
 {
 	if (id == id2)

@@ -59,7 +59,23 @@ int main() {
 			continue;
 		}
 		else if (choice == 4) { //clone subtree
+			if (tree->empty()) {
+				cout << "The main tree is empty. Please insert info first." << endl;
+				system("pause");
+				continue;
+			}
 
+			int targetID = 0;
+			cout << "Please enter the student ID you would like to clone to the subtree." << endl;
+			cout << "Target ID:";
+			cin >> targetID;
+			
+			//Create a temporary student object for comparison purpose.
+			Student target = Student();
+			target.id = targetID;
+			subTree->CloneSubtree(*tree, target);
+
+			system("pause");
 			continue;
 		}
 		else if (choice == 5) { //print level nodes
@@ -80,7 +96,7 @@ int main() {
 		}
 		else {
 
-			cout << "Invalid input! Please enter numerals as choice!" << endl;
+			cout << "Invalid input! Please enter numerals as choice and within provided range!" << endl;
 			system("PAUSE");
 			cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //Clear all the invalid input

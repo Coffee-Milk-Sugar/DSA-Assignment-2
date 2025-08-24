@@ -370,28 +370,80 @@ void BST::customTreeTraverse2(BTNode* cur, int order, ostream&output) {
 
 //(d)
 bool BST::CloneSubtree(BST t1, type item) {
+
+	//find item
+	//if found in t1, traverse like a normal tree and copy all the details to t2;
+	//display t1 and t2 using preOrderPrint() after function call.
+
 	if (t1.root == NULL) { //Case [1]: Empty tree
-		cout << "The clone subject is empty." << endl;
+		cout << "Cannot clone subtree." << endl;
 		return false;
 	}
 
-	if (root != NULL) { //Case [2]: Method used on non-empty tree
-		cout << "The tree calling the method is not empty." << endl;
+	if (root != NULL) {	  //Case [2]: Method used on non-empty tree
+		cout << "Cannot clone subtree." << endl;
 		return false;
 	}
 
+	//Case [3]: Normal process
+	BTNode* targetPtr = NULL;
+	bool found = t1.findItem(item, targetPtr);
 
+	if (found) {
+		cloningTreeTraverse(targetPtr);
+		//Display
 
+		cout << "----------Tree 1 contents----------" << endl;
+		t1.preOrderPrint();
+		cout << endl;
+		cout << "----------Tree 2 contents----------" << endl;
+		preOrderPrint();
 
-	return true;
+		return true;
+	}
+
+	//Case [4]: Item not found
+	cout << "Cannot clone subtree." << endl;
+	return false;
 }
+
+bool BST::findItem(type grandFather, BTNode* &returnPtr) {
+	if (root == NULL) return false;
+	return (fI2(grandFather, root, returnPtr));
+}
+
+bool BST::fI2(type grandFather, BTNode* cur, BTNode* &returnPtr) {
+	if (cur == NULL) return false;
+
+	if (grandFather.compare2(cur->item)) {
+		returnPtr = cur;
+		return true;
+	}
+
+	else if (grandFather.compare1(cur->item)) {
+		return fI2(grandFather, cur->right, returnPtr);
+	}
+	else return fI2(grandFather, cur->left, returnPtr);
+
+}
+
+void BST::cloningTreeTraverse(BTNode* targetPtr) {
+	if (targetPtr == NULL) return;
+	return cloningTreeTraverse2(targetPtr);
+}
+
+void BST::cloningTreeTraverse2(BTNode* cur) {
+	if (cur == NULL) return;
+	insert(cur->item);
+	cloningTreeTraverse2(cur->left);
+	cloningTreeTraverse2(cur->right);
+}
+
 
 //(e)
 bool BST::printLevelNodes() {
 	if (root == NULL) { //Case [1]: Empty tree
-
 		cout << "The tree is empty." << endl;
-
 		return false;
 	}
 
@@ -466,7 +518,7 @@ bool BST::findPath(type grandFather) {
 
 bool BST::fP2(type grandFather, BTNode * cur) {
 		if (cur == NULL) return false;
-		//print node
+		// print node
 		// make comparison, if same, return
 		// else check if bigger, go right
 		// else go left
@@ -481,4 +533,4 @@ bool BST::fP2(type grandFather, BTNode * cur) {
 		}
 		else return fP2(grandFather, cur->left);
 
-	}
+}
