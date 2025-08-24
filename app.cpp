@@ -26,11 +26,11 @@ int main() {
 	source - 2 -> output to file "student-info.txt"
 	*/
 
-	tree->display(1, 2);
-	cout << endl << "-----------------" << endl;
+	//tree->display(1, 2);
+	//cout << endl << "-----------------" << endl;
 
-	tree->display(2, 1);
-
+	//tree->display(2, 1);
+	//tree->deepestNodes();
 
 
 	

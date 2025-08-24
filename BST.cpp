@@ -260,6 +260,62 @@ void BST::case3(BTNode *cur) {
 
 // student created function
 
+//(b)
+bool BST::deepestNodes() {
+	//BFS tree traversal
+	//int treeHeight = 0;
+
+	BTNode* cur;
+	BTNode* discard;
+	BTNode* placeholder;
+	Queue	q;
+	Queue	lastLevelLeaves;
+
+	if (empty()) return false; 	// special case
+	q.enqueue(root);		// Step 1: enqueue the first node
+	while (!q.empty()){		// Step 2: do 2 operations inside
+		int size = q.size();
+		Queue currentLevelLeaves; 
+
+		for (int i = 0; i < size; i++) {
+			q.dequeue(cur);
+			if (cur != NULL) {
+				if (cur->left != NULL) { q.enqueue(cur->left); }
+				if (cur->right != NULL) { q.enqueue(cur->right); }
+				if (cur->left == NULL && cur->right == NULL) currentLevelLeaves.enqueue(cur); //Append the leaves to the custom queue
+			}
+		
+		}
+
+		//treeHeight++;
+		for (int i = lastLevelLeaves.size(); !lastLevelLeaves.empty();) { //Clear the last level leaves
+			lastLevelLeaves.dequeue(discard);
+		}
+
+		if (!currentLevelLeaves.empty()) { //Copy the leaves of current level
+			int deepNodeCount = currentLevelLeaves.size();
+			for (int i = 0; i < deepNodeCount; i++) {
+				currentLevelLeaves.dequeue(placeholder);
+				lastLevelLeaves.enqueue(placeholder);
+			}
+		}
+
+	}
+
+	while (!lastLevelLeaves.empty()) {
+		lastLevelLeaves.dequeue(cur);
+		cout << cur->item.id << endl;
+	}
+	//cout << treeHeight << endl;
+
+
+	return true;
+}
+
+
+
+
+//(c)
 bool BST::display(int order, int source) {
 	/*
 	order - 1 -> ascending (visit left then right)

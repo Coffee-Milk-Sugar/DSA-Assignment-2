@@ -46,9 +46,18 @@ struct BST {
 		bool findGrandsons(type);	// find the grandsons of an input father item
 
 		// student created function
+		//(b)
+		bool deepestNodes();
+
+		//(c)
 		bool display(int, int);
 		void customTreeTraverse(int, ostream&);
 		void customTreeTraverse2(BTNode* , int, ostream&);
+
+		//(d)
+
+		//(e)
+
 };
 
 
