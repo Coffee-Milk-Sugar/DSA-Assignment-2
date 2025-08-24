@@ -63,7 +63,9 @@ int main() {
 			continue;
 		}
 		else if (choice == 5) { //print level nodes
+			tree->printLevelNodes();
 
+			system("pause");
 			continue;
 		}
 		else if (choice == 6) { //print path

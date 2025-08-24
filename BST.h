@@ -50,7 +50,7 @@ struct BST {
 		bool deepestNodes();
 
 		//(c)
-		bool display(int, int);
+		bool display(int order, int source);
 		void customTreeTraverse(int, ostream&);
 		void customTreeTraverse2(BTNode* , int, ostream&);
 

@@ -372,11 +372,53 @@ void BST::customTreeTraverse2(BTNode* cur, int order, ostream&output) {
 
 //(d)
 bool BST::CloneSubtree(BST t1, type item) {
+	if (t1.root == NULL) { //Case [1]: Empty tree
+		cout << "The clone subject is empty." << endl;
+		return false;
+	}
+
+	if (root != NULL) { //Case [2]: Method used on non-empty tree
+		cout << "The tree calling the method is not empty." << endl;
+		return false;
+	}
+
+
+
+
 	return true;
 }
 
 //(e)
 bool BST::printLevelNodes() {
+	if (root == NULL) { //Case [1]: Empty tree
+
+		cout << "The tree is empty." << endl;
+
+		return false;
+	}
+
+	BTNode* cur;
+	Queue q;
+	q.enqueue(root);
+
+	int currentLevel = 1;
+	cout << endl;
+	while (!q.empty()) {
+		int size = q.size();
+		std::cout << "Level " << currentLevel << " nodes: ";
+
+		for (int i = 0; i < size; i++) {
+			q.dequeue(cur);
+			std::cout << cur->item.id << " ";
+
+			if (cur->left)  q.enqueue(cur->left);
+			if (cur->right) q.enqueue(cur->right);
+		}
+
+		std::cout << "\n";
+		currentLevel++;
+	}
+
 	return true;
 }
 
