@@ -407,7 +407,7 @@ bool BST::printLevelNodes() {
 
 		for (int i = 0; i < size; i++) {
 			q.dequeue(cur);
-			std::cout << cur->item.id << " ";
+			std::cout << "[" << cur->item.id << "]  ";
 
 			if (cur->left)  q.enqueue(cur->left);
 			if (cur->right) q.enqueue(cur->right);
@@ -445,7 +445,7 @@ bool BST::printPath() {
 
 		}
 	}
-	cout << "The paths include: " << endl;
+	cout << "Below are all the external paths for the tree: " << endl << endl;
 	int count = 1;
 	while (!currentLevelLeaves.empty()) {
 		currentLevelLeaves.dequeue(cur);
@@ -466,25 +466,19 @@ bool BST::findPath(type grandFather) {
 
 bool BST::fP2(type grandFather, BTNode * cur) {
 		if (cur == NULL) return false;
-		//if (cur->item == grandFather) {
+		//print node
+		// make comparison, if same, return
+		// else check if bigger, go right
+		// else go left
+		cout << "[" << cur->item.id << "]   ";
 
-
-		if (cur->item.compare2(grandFather)) {
-
-			fP3(cur, 0);// do another TT to find grandsons
+		if (grandFather.compare2(cur->item)) {
 			return true;
 		}
-		if (fP2(grandFather, cur->left)) return true;
-		return fP2(grandFather, cur->right);
-	}
 
-void BST::fP3(BTNode * cur, int level) {
-		if (cur == NULL) return;
-
-
-		if (level == 2) {
-			return;  // No need to search downward
+		else if (grandFather.compare1(cur->item)) {
+			return fP2(grandFather, cur->right);
 		}
-		fP3(cur->left, level + 1);
-		fP3(cur->right, level + 1);
+		else return fP2(grandFather, cur->left);
+
 	}

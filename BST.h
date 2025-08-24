@@ -65,7 +65,6 @@ struct BST {
 
 		bool findPath(type );
 		bool fP2(type, BTNode*);					// recursive function for findGrandsons(): to find the grandfather
-		void fP3(BTNode*, int);
 
 
 

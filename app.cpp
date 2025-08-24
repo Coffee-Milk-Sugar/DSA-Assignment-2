@@ -210,6 +210,7 @@ int menu() {
 	cout << endl;
 	cout << "Selection: ";
 	cin >> selection;
+	cout << endl;
 	return selection;
 }
 
