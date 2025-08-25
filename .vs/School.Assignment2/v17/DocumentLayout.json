@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\BST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:BST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:BST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\student.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:student.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{69C5C79C-BAC1-45F7-A6CA-576F2881CFB9}|School.Assignment2.vcxproj|solutionrelative:Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_string_view.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -33,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 273,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,12 +49,24 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_string_view.hpp",
               "ViewState": "AgIAAKYBAAAAAAAAAAAwwLIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-24T15:34:33.3Z",
+              "WhenOpened": "2025-08-24T15:34:33.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.cpp",
+              "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp",
+              "RelativeDocumentMoniker": "app.cpp",
+              "ToolTip": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp",
+              "RelativeToolTip": "app.cpp",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAOYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-23T14:31:48.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Student.cpp",
               "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\Student.cpp",
               "RelativeDocumentMoniker": "Student.cpp",
@@ -67,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "student.txt",
               "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\student.txt",
               "RelativeDocumentMoniker": "student.txt",
@@ -75,12 +87,11 @@
               "RelativeToolTip": "student.txt",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-24T14:05:36.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-24T14:05:36.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BST.h",
               "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\BST.h",
               "RelativeDocumentMoniker": "BST.h",
@@ -88,33 +99,19 @@
               "RelativeToolTip": "BST.h",
               "ViewState": "AgIAACsAAAAAAAAAAAAQwD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-24T04:24:25.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-24T04:24:25.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BST.cpp",
               "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\BST.cpp",
               "RelativeDocumentMoniker": "BST.cpp",
               "ToolTip": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\BST.cpp",
               "RelativeToolTip": "BST.cpp",
-              "ViewState": "AgIAAH8BAAAAAAAAAAAcwIgBAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAALkBAAAAAAAAAAAIwIgBAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-24T01:18:30.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "app.cpp",
-              "DocumentMoniker": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp",
-              "RelativeDocumentMoniker": "app.cpp",
-              "ToolTip": "C:\\Users\\chong\\OneDrive\\Desktop\\Assignments\\DSA\\Assignment_2\\School.Assignment2\\app.cpp",
-              "RelativeToolTip": "app.cpp",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwGIAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-23T14:31:48.444Z",
               "EditorCaption": ""
             }
           ]

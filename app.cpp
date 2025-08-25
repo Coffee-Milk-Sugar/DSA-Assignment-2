@@ -214,6 +214,7 @@ bool readFile(const char* filename, BST* tree) {
 
 //(b)
 int menu() {
+	string input;
 	int selection = 0;
 	cout << "Menu" << endl << endl;
 	cout << "(1) Read data BST" << endl;
@@ -225,7 +226,9 @@ int menu() {
 	cout << "(7) Exit" << endl;
 	cout << endl;
 	cout << "Selection: ";
-	cin >> selection;
+	getline(cin, input);
+	stringstream Cursor(input);
+	Cursor >> selection;
 	cout << endl;
 	return selection;
 }
