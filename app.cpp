@@ -13,7 +13,6 @@ using namespace std;
 
 bool readFile(const char *, BST *);
 int menu();
-void clearCinBuffer(istream &);
 
 
 int main() {
@@ -47,6 +46,9 @@ int main() {
 				Cursor >> source;
 				if (source >= 1 && source <= 2) break;
 
+				cout << "Invalid input! Please enter numerals as choice and within provided range!" << endl;
+				system("PAUSE");
+				system("cls");
 
 			}
 			while (true) { //Loop for validity check
@@ -58,6 +60,10 @@ int main() {
 				cout << endl;
 				if (order >= 1 && order <= 2) break;
 
+				cout << "Invalid input! Please enter numerals as choice and within provided range!" << endl;
+				system("PAUSE");
+				system("cls");
+
 			}
 			tree->display(order, source);
 
@@ -65,11 +71,12 @@ int main() {
 			continue;
 		}
 		else if (choice == 4) { //clone subtree
-			if (tree->empty()) {
+			if (tree->empty()) { //Case [1]: Main tree is empty
 				cout << "The main tree is empty. Please insert info first." << endl;
 				system("pause");
 				continue;
 			}
+
 
 			int targetID = 0;
 			cout << "Please enter the student ID you would like to clone to the subtree." << endl;
@@ -128,8 +135,6 @@ int main() {
 	//tree->display(2, 1);
 	//tree->deepestNodes();
 
-
-	
 
 
 	system("pause");
