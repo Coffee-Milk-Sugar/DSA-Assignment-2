@@ -23,8 +23,8 @@ int main() {
 	bool EXIT = false;
 	do {
 		system("cls");
-
 		int choice = menu();
+
 		if (choice == 1) { //readFile()
 			readFile("student.txt", tree);
 			continue;
@@ -41,17 +41,23 @@ int main() {
 
 			while (true) { //Loop for validity check
 				cout << "Where do you want to display the output (1 - Screen / 2 - File): ";
-				cin >> source;
+				string input;
+				getline(cin, input);
+				stringstream Cursor(input);
+				Cursor >> source;
 				if (source >= 1 && source <= 2) break;
-				clearCinBuffer(cin);
+
 
 			}
 			while (true) { //Loop for validity check
 				cout << "Which order of display? (1 - Ascending/ 2 - Descending): ";
-				cin >> order;
+				string input;
+				getline(cin, input);
+				stringstream Cursor(input);
+				Cursor >> order;
 				cout << endl;
 				if (order >= 1 && order <= 2) break;
-				clearCinBuffer(cin);
+
 			}
 			tree->display(order, source);
 
@@ -68,7 +74,10 @@ int main() {
 			int targetID = 0;
 			cout << "Please enter the student ID you would like to clone to the subtree." << endl;
 			cout << "Target ID:";
-			cin >> targetID;
+			string input;
+			getline(cin, input);
+			stringstream Cursor(input);
+			Cursor >> targetID;
 			
 			//Create a temporary student object for comparison purpose.
 			Student target = Student();
@@ -99,7 +108,6 @@ int main() {
 			cout << "Invalid input! Please enter numerals as choice and within provided range!" << endl;
 			system("PAUSE");
 			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //Clear all the invalid input
 			system("cls");
 			continue;
 		}
